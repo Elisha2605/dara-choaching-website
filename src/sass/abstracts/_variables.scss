@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+/* ==========================================================================
+COLOR 
+========================================================================== */
+$color-primary: #603d2f;
+$color-primary-lighten: lighten($color-primary, 50%);
+$color-chalk: #eeebe7;
+$color-gold: #cf7c29;
+
+
+
+/* ==========================================================================
+FONTS 
+========================================================================== */
+
+/* ------------ font-family ------------ */
+$font-family-robot: 'Roboto', sans-serif;
+$font-family-OpenSans: 'Open Sans';
+
+/* ------------ font-size ------------ */
+$font-size-h1: 2rem;
+$font-size-h2: 1.4rem;
+$font-size-h3: 1.2rem;
+
+$font-size-sm: 0.8rem;
+
+/* ------------ font-weight ------------ */
+$font-weight-xl: 600;
+$font-weight-lg: 400;
+$font-weight-md: 300;
+$font-weight-sm: 100;
+
+/* ------------ font-line-height ------------ */
+$font-line-height-sm: 1.3rem;
+
+
+/* ==========================================================================
+NAV 
+========================================================================== */
+
+/* ------------ nav height  ------------ */
+$nav-mobile-height: 4rem;
+$nav-mobileLandscape-height: 5rem;
+$nav-tablet-height: 5.3rem;
+$nav-desktop-height: 5.4rem;
+$nav-wide-height: 5.5rem;
+
+/* ------------ nav padding  ------------ */
+$nav-mobile-padding: 0 1rem 0 1rem;
+$nav-tablet-padding: 0 1.5rem 0 1.5rem;
+$nav-desktop-padding: 0 3rem 0 3rem;
+$nav-wide-padding: 0 6rem 0 6rem;
+
+
+/* ==========================================================================
+HERO 
+========================================================================== */
+$hero-height: 27rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// font-zise: rem
+// with: %
+// padding rem
+// buttom padding: em
+// text element (margin-top): 1rem
+// heading (margin-buttom): 1em

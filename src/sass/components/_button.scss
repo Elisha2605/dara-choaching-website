@@ -1,0 +1,14 @@
+@use "../mq" as *;
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.btn-primary {
+    font-family: $font-family-robot;
+    color: $color-primary;
+    font-size: 1rem;
+    font-weight: 400;
+    a {
+        border: 0.7px solid $color-primary;
+        padding: 0.5rem 3.2rem;
+    }
+}

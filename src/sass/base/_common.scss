@@ -1,0 +1,43 @@
+@use "../mq" as *;
+@use "../abstracts" as *;
+
+.title {
+    font-size: $font-size-h1;
+    text-align: center;
+    font-weight: $font-weight-xl;
+}
+.sub-title {
+    font-size: $font-size-h2;
+}
+
+.paragraph {
+    font-family: $font-family-OpenSans;
+}
+
+ul {
+    padding-top: 1rem;
+    color: $color-primary;
+}
+li {
+    display: list-item;                                                     
+    list-style-type: circle;    
+    list-style-position: inside;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.prev-btn, .next-btn {
+    width: 5rem;
+}
+
+.prev-btn.disabled, .next-btn.disabled {
+    background: none;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(0%);
+    pointer-events: none;
+}

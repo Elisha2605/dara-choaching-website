@@ -1,0 +1,211 @@
+@use "../mq";
+@use "../base" as *;
+@use "../abstracts" as *;
+
+
+/* HERO */
+.hero {
+    @include marginTop($nav-mobile-height);
+    position: absolute;
+    width: 100%;
+    height: $hero-height;
+    img {
+        @include imgDefault();
+    }
+}
+.hero-text p {
+    text-align: center;
+}
+
+
+/* MEET YOUR COACH */
+.meet-your-coach {
+    width: 100%;
+    @include flex(column, 1.5);
+    &__title {
+        @include flex(column, 0.5);
+        padding-top: 2rem;
+    }
+    &__img {
+        width: 100%;
+        height: 20rem;
+        img {
+            @include imgDefault();
+        }
+    }
+    &__btn {
+        @include paddingTB(1, 2);
+    }
+}
+
+/* LIFE COACH */
+.life-coach {
+    @include flex(column, 1.5);
+    &__title {
+
+    }
+    &__description {
+        padding-top: 0.5rem;
+        text-align: left;
+    }
+    &__benefits, &__tools{
+        align-self: flex-start;
+    }
+    &__list {
+        padding: 1rem 0.5rem;
+        color: $color-primary;
+    }
+    
+    .under-line-right, .underline-left{
+        width: 50%;
+        border: 0.2px solid $color-primary;
+    }
+ 
+
+}
+
+.service {
+    @include flex(column, 1.5);
+    padding: 1.5rem 0;
+    width: 100%;
+    &__title {
+
+    }
+    &__sub-title {
+        .title {
+            font-weight: 600;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+        gap: 0.5rem;
+    }
+    &__img {
+        width: 100%;
+        height: 16rem;
+        img {
+            @include imgDefault();
+        }
+    }
+    &__list {
+        align-self: flex-start;
+    }
+    &__btn {
+        @include paddingTB(1, 0)
+    }
+    
+    // 3. pre-set-options
+    &__pre-set-options {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        div {
+            padding: 1rem;
+            text-align: center;
+            background-color: $color-chalk;
+        }
+    }   
+}
+
+.price {
+    @include flex(column, 1.5);
+    width: 100%;
+    &__title {
+
+    }
+    &__table {
+        width: 100%;
+        padding-top: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    &__service, &__price {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        &-title {
+            padding: 2rem;
+            font-weight: $font-weight-xl;
+            background-color: $color-primary-lighten;
+        }
+    }
+    &__items {
+        background-color: $color-chalk;
+        padding: 2rem 0;
+    }
+    &__btn {
+        @include paddingTB(1, 0)
+    }
+    &__info {
+        text-align: center;
+        font-size: $font-size-sm;
+    }
+}
+
+.testimonial {  
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+
+    &__wrapper {
+        display: flex;
+        padding-top: 6rem;
+        @include flex(row, 1);
+
+    }
+    &__card-conainer {
+        @include flex(column, 1.5);
+        text-align: center;
+        padding: 1rem;
+        
+    }
+    &__customer-name {
+        padding-bottom: 2rem;
+        font-size: $font-size-h2;
+        font-weight: $font-weight-xl;
+    }
+    
+}
+
+.footer {
+    @include flex(column, 0.5);
+    color: $color-gold;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    &__title {
+        padding: 2rem;
+    }
+    &__img {
+        width: 80%;
+        height: 15rem;
+        img {
+            @include imgDefault();
+        }
+    }
+    
+    &__contact {
+        @include flex(column, 0.8);
+        padding: 1rem 3rem;
+    }
+    &__btn {
+        color: inherit;
+        @include paddingTB(0, 1)
+    }
+    &__social-media {
+        @include flex(row, 1);
+        object {
+            width: 2rem;
+        }
+    }
+    &__copy-write {
+        padding-top: 2rem;
+        font-size: $font-size-sm;
+    }
+    
+}

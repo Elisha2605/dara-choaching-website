@@ -1,0 +1,28 @@
+@use "../mq";
+@use "../base" as *;
+@use "../abstracts" as *;
+
+
+
+section {
+  padding: 0 1.5rem;
+}
+.section-hero {
+    padding-top: 3rem;
+    @include flex(column, 1.5);
+}
+
+.section-meet-your-coach {
+    background-color: $color-chalk;
+}
+
+.section-service {
+    @include flex(column, 0);
+    .service-title {
+        padding-top: 1rem;
+    }
+}
+
+.section-testimonial {
+    background-color: $color-chalk;
+}

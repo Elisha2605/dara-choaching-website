@@ -1,0 +1,32 @@
+@use "../mq";
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.layout {
+  display: grid;
+  // background-color: $background-color;
+  main > section {
+    margin-top: 2rem;
+  }
+
+  @include mq.mq($until: mobileLandscape) {
+    grid-template-columns: 1fr 95% 1fr;
+    // background-color: #F49D37;
+  }
+  @include mq.mq($from: mobileLandscape, $until: tablet) {
+    grid-template-columns: 1fr 95% 1fr;
+    background-color: #778DA9;
+  }
+  @include mq.mq($from: tablet, $until: desktop) {
+    grid-template-columns: 1fr 95% 1fr;
+    background-color: #E26D5A;
+  }
+  @include mq.mq(desktop, $until: wide) {
+    grid-template-columns: 1fr 75% 1fr;
+    background-color: #CBC9AD;
+  }
+  @include mq.mq($from: wide) {
+    grid-template-columns: 1fr 65% 1fr;
+    background-color: #335C81;
+  }
+}

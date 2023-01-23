@@ -1,0 +1,11 @@
+@use "../mq";
+@use "../base" as *;
+@use "../abstracts" as *;
+
+
+footer {
+    // margin-top: 3rem;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+}

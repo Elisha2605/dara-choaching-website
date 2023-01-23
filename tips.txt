@@ -1,0 +1,25 @@
+1. Analyse the layout
+    * find things that repeats themselves or common elements 
+    * column, rows, spacing, layout
+
+This will allow you to plan things before and you will save a lot of time.
+DON'T REAPET YOURSELF
+
+
+2. Name Your SASS Variables Modularly
+$blue;
+$blue-dark;
+$blue-darkest;
+$blue-light;
+$blue-lightest;
+
+3. Avoid setting the hight to the parent. 
+    * Let the children dictate the hight
+
+4. https://codyhouse.co/ds/globals/typography
+
+5. navbar animation: https://www.youtube.com/watch?v=_pZrP3r1rMo
+
+6. navbar on scroll-up: https://www.youtube.com/results?search_query=navbar+animation+on+scroll+
+
+7. How to change your navigation style on scroll: https://www.youtube.com/watch?v=RxnV9Xcw914
