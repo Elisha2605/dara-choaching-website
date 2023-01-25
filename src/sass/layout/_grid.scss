@@ -5,6 +5,7 @@
 .layout {
   display: grid;
   // background-color: $background-color;
+  
   main > section {
     margin-top: 2rem;
   }
@@ -12,14 +13,16 @@
   @include mq.mq($until: mobileLandscape) {
     grid-template-columns: 1fr 95% 1fr;
     // background-color: #F49D37;
+
   }
   @include mq.mq($from: mobileLandscape, $until: tablet) {
     grid-template-columns: 1fr 95% 1fr;
-    background-color: #778DA9;
+    
+    // background-color: #778DA9;
   }
   @include mq.mq($from: tablet, $until: desktop) {
     grid-template-columns: 1fr 95% 1fr;
-    background-color: #E26D5A;
+    // background-color: #E26D5A;
   }
   @include mq.mq(desktop, $until: wide) {
     grid-template-columns: 1fr 75% 1fr;

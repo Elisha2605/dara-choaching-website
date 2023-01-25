@@ -1,4 +1,4 @@
-@use "../mq" as *;
+@use "../mq";
 @use "../abstracts" as *;
 
 .title {
@@ -8,10 +8,6 @@
 }
 .sub-title {
     font-size: $font-size-h2;
-}
-
-.paragraph {
-    font-family: $font-family-OpenSans;
 }
 
 ul {

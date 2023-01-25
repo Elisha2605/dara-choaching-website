@@ -6,9 +6,27 @@
 
 section {
   padding: 0 1.5rem;
+
+
+/*
+---------------------------
+        Media querys
+---------------------------
+*/
+
+/* mobile-landscape*/
+  @include mq.mq($from: mobileLandscape, $until: tablet) 
+  {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    .paragraph, ul, li {
+        padding: 0 3rem;
+    }  
+
+  }
 }
 .section-hero {
-    padding-top: 3rem;
     @include flex(column, 1.5);
 }
 
@@ -26,3 +44,4 @@ section {
 .section-testimonial {
     background-color: $color-chalk;
 }
+

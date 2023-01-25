@@ -1,4 +1,4 @@
-@use "../mq" as *;
+@use "../mq";
 @use "../base" as *;
 @use "../abstracts" as *;
 
@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    // position: absolute;
     width: 100%;
     height: $nav-mobile-height;
     padding: 1rem;
@@ -52,20 +52,38 @@
         &.is-active::after {
             transform: rotate(-45deg) translate(-3px, -9px);
         }
-        
+
+     
+    
     }
 
-    // background: black;
-    @include mq($from: mobileLandscape, $until: tablet) {
+
+   /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape */
+    @include mq.mq($from: mobileLandscape, $until: tablet) {
         height: $nav-mobileLandscape-height;
+        &__logo {
+            width: 8rem;
+        }
     }
-    @include mq($from: tablet, $until: desktop) {
+
+    /* tablet */
+    @include mq.mq($from: tablet, $until: desktop) {
         height: $nav-tablet-height;
+        padding: 2rem;
+        &__logo {
+            width: 12rem;
+        }
     }
-    @include mq($from: desktop, $until: wide) {
+    @include mq.mq($from: desktop, $until: wide) {
         height: $nav-desktop-height;
     }
-    @include mq($from: wide) {
+    @include mq.mq($from: wide) {
        height: $nav-wide-height;
     }
 }

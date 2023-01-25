@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bbc3cf"/>
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body class="layout">
+<body>
     <nav class="nav">
         <img class="nav__logo" src="./assets/logo/logo-sm.png" alt="">
         <button class="nav__humburger">
@@ -16,21 +17,25 @@
         </button>
     </nav>
     <!-- HERO - Image -->
-    <div class="hero">
-        <img src="./assets/hero/hero.jpg" alt="">
-    </div>
+    <picture class="hero-image">
+        <source media="(min-width: 740px)" srcset="./assets/hero/hero-tablet.jpg">
+        <source media="(min-width: 400px)" srcset="./assets/hero/hero-mobile-landscape.jpg">
+        <img src="./assets/hero/hero-mobile.jpg" alt="">
+    </picture>
+
+
+    <div class="layout">
     <main>
         <!-- HERO -->
-        <section class="section-hero">
+        <div class="section-hero">
             <div class="hero-text">
-                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi
+                <p class="paragraph"> I am your wind underneth you wings
                 </p>
             </div>
             <div class="button-hero btn-primary">
                 <a href="">BOOKING</a> 
             </div>
-        </section>
+        </div>
 
         <!-- MEET YOUR COACH -->
         <section class="section-meet-your-coach">
@@ -39,9 +44,10 @@
                     <h1 class="title">Meet your coach</h1>
                     <h1>- Aicha E. Haïdra</h1>
                 </div>
-                <div class="meet-your-coach__img">
-                    <img src="./assets/meet-your-coach.jpg" alt="">
-                </div>  
+                <picture class="meet-your-coach__img">
+                    <source media="(min-width: 400px)" srcset="./assets/meet-your-coach-mobile-landscape.jpg">
+                    <img src="./assets/meet-your-coach-mobile.jpg" alt="">
+                </picture>  
                 <div class="meet-your-coach__content">
                     <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
@@ -62,7 +68,7 @@
                     <h1 class="title">Life Coaching</h1>
                 </div>
                 <div class="life-coach__description">
-                    <p>
+                    <p class="paragraph">
                         Short Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maxime mollitia, molestiae quas vel sint commodi repudiandae 
                         consequuntur voluptatum laborum numquam blanditiis harum quisquam 
@@ -246,7 +252,7 @@
 
             </div>
         </section>
-        
+        </div>
         <footer>
             <div class="footer">
                 <div class="footer__title">

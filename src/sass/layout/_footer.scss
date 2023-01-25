@@ -9,3 +9,57 @@ footer {
     bottom: 0;
     background-color: black;
 }
+
+.footer {
+    @include flex(column, 0.5);
+    color: $color-gold;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    &__title {
+        padding: 2rem;
+    }
+    &__img {
+        width: 80%;
+        img {
+            @include imgDefault();
+        }
+    }
+    
+    &__contact {
+        @include flex(column, 0.8);
+        padding: 1rem 3rem;
+    }
+    &__btn {
+        color: inherit;
+        @include paddingTB(0, 1)
+    }
+    &__social-media {
+        @include flex(row, 1);
+        object {
+            width: 2rem;
+        }
+    }
+    &__copy-write {
+        padding-top: 2rem;
+        font-size: $font-size-sm;
+    }
+
+    /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape*/
+    @include mq.mq($from: mobileLandscape, $until: tablet)
+    {
+        &__img {
+            width: 50%;
+            img {
+                @include imgDefault();
+            }
+        }
+    }
+    
+}

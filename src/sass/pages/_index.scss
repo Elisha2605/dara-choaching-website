@@ -4,17 +4,38 @@
 
 
 /* HERO */
-.hero {
-    @include marginTop($nav-mobile-height);
-    position: absolute;
+.hero-image {
     width: 100%;
-    height: $hero-height;
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        
+    }
+
     img {
         @include imgDefault();
     }
+    
 }
-.hero-text p {
+.hero-text {
+    padding: 0.5rem 1.5rem;
     text-align: center;
+
+    /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape */
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        padding: 1rem 5rem;
+    }
+
+    @include mq.mq($from: tablet, $until: desktop) 
+    {
+        
+    }
 }
 
 
@@ -28,22 +49,27 @@
     }
     &__img {
         width: 100%;
-        height: 20rem;
+        max-width: 100%;
         img {
-            @include imgDefault();
+            // @include imgDefault();
+            width: 100%;
+            height: auto
         }
     }
     &__btn {
         @include paddingTB(1, 2);
+    }
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        &__img {
+            width: 50%;
+        }
     }
 }
 
 /* LIFE COACH */
 .life-coach {
     @include flex(column, 1.5);
-    &__title {
-
-    }
     &__description {
         padding-top: 0.5rem;
         text-align: left;
@@ -66,11 +92,9 @@
 
 .service {
     @include flex(column, 1.5);
-    padding: 1.5rem 0;
+    padding-top: 2rem;
     width: 100%;
-    &__title {
-
-    }
+   
     &__sub-title {
         .title {
             font-weight: 600;
@@ -83,7 +107,7 @@
     }
     &__img {
         width: 100%;
-        height: 16rem;
+
         img {
             @include imgDefault();
         }
@@ -107,15 +131,55 @@
             text-align: center;
             background-color: $color-chalk;
         }
-    }   
+    } 
+
+
+    /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape*/
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        padding-top: 3.5rem;
+        
+        &__sub-title {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            .title {
+                font-weight: 600;
+            }
+            align-self: center;
+        }
+        &__img {
+            width: 80%;
+        }
+        ul {
+            align-self: center
+        }
+
+        &__pre-set-options {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+    
+            div {
+                padding: 1rem;
+                text-align: center;
+                background-color: $color-chalk;
+            }
+        } 
+    }
 }
 
 .price {
     @include flex(column, 1.5);
     width: 100%;
-    &__title {
-
-    }
+    
     &__table {
         width: 100%;
         padding-top: 0.5rem;
@@ -145,6 +209,20 @@
         text-align: center;
         font-size: $font-size-sm;
     }
+    
+    /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape*/
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        &__table {
+            width: 80%;
+        }
+    }
 }
 
 .testimonial {  
@@ -169,43 +247,34 @@
         font-size: $font-size-h2;
         font-weight: $font-weight-xl;
     }
+
+    /*
+    ---------------------------
+            Media querys
+    ---------------------------
+    */
+
+    /* mobile-landscape*/
+    @include mq.mq($from: mobileLandscape, $until: tablet) 
+    {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+        &__wrapper {
+
+            padding-top: 4rem;    
+        }
+    }
     
 }
 
-.footer {
-    @include flex(column, 0.5);
-    color: $color-gold;
-    text-align: center;
-    padding-bottom: 2rem;
 
-    &__title {
-        padding: 2rem;
-    }
-    &__img {
-        width: 80%;
-        height: 15rem;
-        img {
-            @include imgDefault();
-        }
-    }
-    
-    &__contact {
-        @include flex(column, 0.8);
-        padding: 1rem 3rem;
-    }
-    &__btn {
-        color: inherit;
-        @include paddingTB(0, 1)
-    }
-    &__social-media {
-        @include flex(row, 1);
-        object {
-            width: 2rem;
-        }
-    }
-    &__copy-write {
-        padding-top: 2rem;
-        font-size: $font-size-sm;
-    }
-    
+
+@include mq.mq($from: tablet, $until: desktop) {
+
+}
+@include mq.mq($from: desktop, $until: wide) {
+
+}
+@include mq.mq($from: wide) {
+
 }

@@ -8,30 +8,19 @@
 main {
   grid-column: 2/3;
   font-family: $font-family-OpenSans;
-  color: $color-primary;
-  line-height: $font-line-height-sm;
-  // margin-top: $nav-mobile-height;
-  @include marginTop($hero-height);
-  border: 1px dashed darkmagenta;
+
+  // border: 1px dashed darkmagenta;
  
   @include mq.mq($from: mobileLandscape, $until: tablet) {
-    @include marginTop($hero-height);
-    // margin-top: $nav-mobileLandscape-height;
-    border: 1px dashed blue;
+
   }
   @include mq.mq($from: tablet, $until: desktop) {
-   @include marginTop($hero-height);
-  //  margin-top: $nav-tablet-height;
-   border: 1px dashed white;
+   border: 1px dashed black;
   }
   @include mq.mq($from: desktop, $until: wide) {
-    @include marginTop($hero-height);
-    // margin-top: $nav-desktop-height;
     border: 1px dashed red;
   }
   @include mq.mq($from: wide) {
-    @include marginTop($hero-height);
-    // margin-top: $nav-wide-height;
     border: 1px dashed yellow;
   }
 }
